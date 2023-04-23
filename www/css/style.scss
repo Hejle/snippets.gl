@@ -1,0 +1,84 @@
+@import "mixins";
+@import "reset";
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+
+    &,
+    &:after,
+    &:before {
+        @include box-sizing(border-box);
+    }
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    font: {
+        family: "JetBrains Mono", Helvetica, Arial, sans-serif;
+        size: 16px;
+        weight: 400;
+    }
+    line-height: 1.5;
+
+    color: #bbb;
+    background: #141518;
+
+    text-rendering: optimizeLegibility;
+    @include text-size-adjust(100%);
+    @include font-smoothing(on);
+}
+
+a {
+    text-decoration: none;
+
+    color: #f9ba00;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+strong,
+b {
+    font-weight: bold;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+.in-dev {
+    .container {
+        margin-top: 10%;
+        padding-top: 3.5rem;
+
+        text-align: center;
+
+        p {
+            margin-bottom: 6px;
+
+            font-size: 1.1rem;
+            text-align: center;
+
+            color: #888;
+        }
+
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 700;
+        }
+    }
+}

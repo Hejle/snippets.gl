@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "clean": "rimraf --glob \"static/**\" \".build/**\"",
+    "css": "node-sass --output-style compressed -o static/css www/css",
+    "js": "mkdirp static/js && tsc && browserify .build/script.js | uglifyjs -cm -o static/js/script.js",
+    "html": "html-minifier --input-dir www/html --output-dir static --file-ext html --collapse-whitespace --conservative-collapse --keep-closing-slash --remove-empty-attributes --remove-comments",
+    "build": "npm run css && npm run js && npm run html",
+    "live": "npx servor static --reload --browse"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.0",
+    "browserify": "^17.0.0",
+    "html-minifier": "^4.0.0",
+    "mkdirp": "^3.0.0",
+    "node-sass": "^8.0.0",
+    "rimraf": "^5.0.0",
+    "servor": "^4.0.2",
+    "typescript": "^5.0.4",
+    "uglify-js": "^3.17.4"
+  }
+}

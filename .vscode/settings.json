@@ -1,0 +1,21 @@
+{
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.wordWrap": "off",
+    "files.exclude": {
+        ".build/": true,
+        "**/node_modules/": true
+    },
+    "search.exclude": {
+        ".build/": true,
+        "**/node_modules": true,
+        "static/": true
+    },
+    "[markdown]": {
+        "editor.wordWrap": "on"
+    },
+    "[json]": {
+        "editor.wordWrap": "on"
+    }
+}
