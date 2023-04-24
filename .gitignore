@@ -1,4 +1,7 @@
 /.build
 /static
 
+.ssh
 node_modules/
+
+deploy.tar.gz
